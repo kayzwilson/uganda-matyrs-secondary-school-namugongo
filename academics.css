@@ -1,0 +1,454 @@
+:root{
+  
+    --primary-color: whitesmoke;
+    --back-color: #002147;
+    --secondary-color: gold;
+    --full-color: white;
+    --null-color: black;
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+      width: 100vw;
+      overflow-x: hidden;
+      background: var(--primary-color);
+  }
+  
+  .navbar{
+      width: 100%;
+      height: 15vh;
+      background: var(--back-color);
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      z-index: 1000;
+      
+  }
+  
+  .navbar .nav-logo{
+      width: 40%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+}
+
+  .nav-logo span{
+    color: var(--primary-color);
+}
+  
+  .nav-logo img{
+      width: 18%;
+      height: 55%;
+  }
+  
+  .navbar .nav-move{
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  
+  .nav-move span{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 5px;
+      transition: all ease 0.5s;
+      border-bottom: 5px solid var(--back-color);
+      height: 50%;
+     
+  }
+  
+  .nav-move span a{
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--full-color);
+      font-family: Arial, sans-serif;
+  }
+  
+  .nav-move span.we_here{
+      border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  .nav-move span:hover{
+      border-bottom: 5px solid var(--secondary-color);
+  }
+
+.school-admin{
+    width: 100%;
+    height: 87vh;
+    border: 1px solid var(--back-color);
+    display: flex;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+.school-admin .admin-photo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-photo img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.school-admin .admin-message{
+    width: 70%;
+    height: 100%;
+   
+    
+}
+
+.admin-message h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.admin-message p{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.school-subjects{
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('namugongo_background.jpeg') center/cover no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-bottom: 5vh;
+    
+}
+
+ h2{
+    color: var(--null-color);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    
+}
+
+.school-subjects .science_subjects{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.school-subjects h2{
+    color: var(--full-color);
+}
+
+.accord{
+    width: 85%;
+    height: 40px;
+    text-align: left;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--full-color);
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-left: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+.accord::after{
+    content: '\2304';
+    color: var(--secondary-color);
+    font-weight: bold;  
+    position: absolute;
+    right: 10%;
+    top: -25%;
+    font-size: 1.8rem;
+}
+
+.accord:hover{
+    background: var(--secondary-color);
+    color: var(--null-color);
+}
+
+.active{
+    background: var(--secondary-color);
+    color: var(--null-color);
+}
+
+.active::after{
+    content: '\2303';
+    color: var(--null-color);
+    top: unset;
+}
+
+
+
+.panel{
+    background-color: var(--primary-color);
+    overflow: hidden;
+    margin-top: -21px;
+    width: 85%;  
+    font-size: 1.5rem;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    padding-left: 5px;
+ }
+
+ .panel p{
+    color: var(--null-color);
+    font-size: 20px;
+ }
+
+.school-subjects .arts_subjects{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 23px; 
+}
+
+.arts_subjects span{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10%;
+}
+
+.arts_subjects a{
+    color: red;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.arts_subjects a:last-child{
+    color: white;
+}
+
+.arts_subjects a:hover{
+    color: green;
+    
+}
+
+.school_departments{
+   width: 85%;
+   height: 110vh;
+   margin: 0 auto;
+   background-color: var(--full-color);
+   margin-bottom: 5vh;
+   padding-top: 10px;
+}
+
+.school_departments h2{
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+}
+
+.school_departments table{
+    width: 85%;
+    height: 80%;
+    
+    margin: auto auto;
+    display: flex;
+    
+    justify-content: center;
+}
+
+.school_departments table th{
+    background: var(--secondary-color);
+    width: 500px;
+    height: 35px;
+    color: var(--null-color);
+    font-size: 1.3rem;
+}
+
+.school_departments table td{
+    background: var(--back-color);
+    width: 500px;
+    height: 43px;
+    color: var(--primary-color);
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.school_copyright{
+    width: 100%;
+    height: 10vh;
+    background: rgb(54, 54, 54);
+    display: flex;
+    
+    align-items: center;
+}
+
+.school_copyright h3{
+    color: var(--full-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin-left: 10%;
+}
+
+/* Media Queries for max-width 480px */
+@media only screen and (max-width: 800px) {
+    /* Base adjustments */
+    
+    
+    /* Navigation */
+    .navbar .nav-logo{
+        width: 100%;
+    }
+    .nav-logo  span{
+        color: var(--primary-color);
+        font-size: 1.2rem;
+    }
+    .nav-logo span.menu{
+        display: block;
+        margin-left: 17%;
+        background: var(--secondary-color);
+        border-radius: 50%;
+        padding: 7px;
+    }
+    .nav-logo span.menu i{
+        color: var(--null-color);
+        font-size: 32px;
+    }
+    .navbar .nav-move{
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        background:rgba(3, 3, 63, 0.8);
+        transition: width ease-in-out 0.6s;
+    }
+    .nav-move span{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        margin: unset;
+        height: 100%;
+        border-bottom: 5px solid var(--primary-color);
+    }
+    
+    /* School admin section */
+    .school-admin {
+        flex-direction: column;
+        height: auto;
+        padding-top: 15vh;
+    }
+    
+    .school-admin .admin-photo {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+    
+    .admin-photo img {
+        width: 50%;
+        height: auto;
+    }
+    
+    .school-admin .admin-message {
+        width: 100%;
+        padding: 0 15px 20px;
+    }
+    
+    .admin-message p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    /* Subjects section */
+    .school-subjects {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        
+    }
+    
+    .school-subjects .science_subjects,
+    .school-subjects .arts_subjects {
+        width: 100%;
+        padding: 20px 0;
+    }
+    
+    .accord {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+    
+    .panel p {
+        font-size: 1rem;
+    }
+    
+    .arts_subjects span {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    
+    /* Departments table */
+    .school_departments {
+        width: 95%;
+        height: auto;
+        padding: 20px auto;
+        
+    }
+    
+    .school_departments table {
+        width: 95%;
+        display: block;
+        overflow-x: auto;
+        margin-left: 12%;
+    }
+    
+    .school_departments table th,
+    .school_departments table td {
+        width: 150px;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .school_copyright h3 {
+        margin-left: 0;
+        text-align: center;
+        padding: 0 10px;
+        font-size: 0.9rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+
+
+  

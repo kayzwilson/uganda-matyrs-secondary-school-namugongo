@@ -1,0 +1,213 @@
+:root {
+    --primary-color: whitesmoke;
+    --back-color: #002147;
+    --secondary-color: gold;
+    --full-color: white;
+    --null-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--primary-color);
+    background-image: url('https://ugandamartyrs.ac.ug/wp-content/uploads/2022/08/tuxpi.com_.1661247831.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    background: var(--back-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-logo span {
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.menu {
+    display: none;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.menu i {
+    color: var(--null-color);
+}
+
+.nav-move {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-move a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+.nav-move a:nth-of-type(3){
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.nav-move a:hover {
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+@media screen and (max-width: 720px) {
+    .menu {
+        display: block;
+    }
+
+    .nav-move {
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        width: 0;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background: rgba(3, 3, 63, 0.9);
+        overflow: hidden;
+        transition: width 0.6s ease-in-out;
+    }
+}
+
+header {
+    background-color: var(--back-color);
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+.tabs {
+    display: flex;
+    cursor: pointer;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.tab.active {
+    background-color: var(--back-color);
+    color: white;
+}
+
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    display: none;
+    background-size: cover;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Starts slightly below */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+    font-family: 'Poppins', sans-serif; /* Applying Poppins font */
+    font-size: 1.2rem; /* Making text larger for better readability */
+    line-height: 1.6; /* Improving spacing for readability */
+    color: #333; /* Darker color for better contrast */
+}
+
+.tab-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #002147; /* Keeping it in sync with your theme */
+    text-transform: uppercase;
+    margin-bottom: 10px;}
+
+.tab-content.active {
+    display: block;
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move into place */
+}
+
+
+.school-social {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--back-color);
+}
+
+.school-social h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.school-social i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.school-social i:hover {
+    color: var(--secondary-color);
+}
+.school_copyright{
+    width: 100%;
+    height: 10vh;
+    background: var(--back-color);
+    display: flex;
+    
+    align-items: center;
+}
+
+.school_copyright h3{
+    color: var(--full-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin-left: 10%;
+}

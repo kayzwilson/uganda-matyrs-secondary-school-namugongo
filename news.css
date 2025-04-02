@@ -1,0 +1,693 @@
+:root{
+  
+    --primary-color: whitesmoke;
+    --back-color: #002147;
+    --secondary-color: gold;
+    --full-color: white;
+    --null-color: black;
+}
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body{
+      width: 100vw;
+      overflow-x: hidden;
+      background: var(--primary-color);
+  }
+  
+  .navbar{
+      width: 100%;
+      height: 15vh;
+      background: var(--back-color);
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      z-index: 1000;
+      
+  }
+  
+  .navbar .nav-logo{
+      width: 40%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+  }
+  .nav-logo  span{
+      color: var(--primary-color) !important;
+ }
+ .nav-logo  span p{
+   text-shadow: none;
+   color: var(--full-color);
+ }
+  
+  .nav-logo span.menu{
+    display: none;
+  }
+  
+  .nav-logo img{
+      width: 18%;
+      height: 55%;
+  }
+  
+  .navbar .nav-move{
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+  }
+  
+  .nav-move span{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 5px;
+      transition: all ease 0.5s;
+      border-bottom: 5px solid var(--back-color);
+      height: 50%;
+  }
+  
+  .nav-move span a{
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--full-color);
+      font-family: Arial, sans-serif;
+  }
+  
+  .nav-move span.we_here{
+      border-bottom: 5px solid var(--secondary-color);
+  }
+  
+  .nav-move span:hover{
+      border-bottom: 5px solid var(--secondary-color);
+  }
+  .school_news{
+    padding-top: 15vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(school_news.jpg);
+    background-size: cover;
+ }
+ 
+ .school_news h1,p{
+    color: black;
+    
+ }
+
+ .school_news h1{
+   text-shadow: 3px 3px 5px white;
+}
+ .school_news p{
+    font-size: 1.2rem;
+ }
+ h3{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: -27px;
+    font-size: 1.4rem;
+ }
+ .news_latest{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5vh;
+    position: relative;
+    gap: 3%;
+ }
+ .news_latest .latest_section{
+    height: 90%;
+    width: 30%;
+    background: rgb(224, 223, 223);
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+    
+ }
+
+ .latest_section:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+ }
+ .news_latest .latest_section:first-of-type{
+    margin-left: 30px;
+ }
+ .latest_section .news_image{
+    width: 100%;
+    height: 60%;
+    background: var(--back-color);
+    
+ }
+ .news_image img{
+    width: 100%;
+    height: 95%;
+    
+ }
+ .latest_section h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-top: 15px;
+   
+ }
+ .latest_section p{
+    margin: 15px 10px 5px 10px;
+   
+    text-shadow: none;
+    font-size: 1.1rem;
+    line-height: 1.4;
+ }
+ .latest_section button{
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    width: 35%;
+    height: 40px;
+    cursor: pointer;
+    background: var(--back-color);
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    
+    color: var(--secondary-color);
+ }
+ .latest_section button:hover{
+    background: var(--secondary-color);
+    color: var(--back-color);
+    box-shadow: 3px 3px 5px var(--null-color);
+ }
+ .news_latest button.next, button.previous{
+    position: absolute;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    right: 2%;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: none;
+    outline: 0;
+    box-shadow: 2px 3px 3px black;
+    cursor: pointer;
+    background: rgba(248, 248, 103, 0.5);
+ }
+
+ button.next:hover, button.previous:hover{
+    background: var(--secondary-color);
+ }
+
+ button.previous{
+   left: 2%;
+   display: none;
+ }
+
+.hidden{
+   display: none;
+   opacity: 0;
+}
+
+.school_duty{
+   width: 100%;
+   height: 90vh;
+   background: rgb(224, 223, 223);
+   margin-bottom: 5vh;
+   display: flex;
+   overflow: hidden;
+   position: relative;
+}
+
+.school_duty .duty_section{
+   width: 80%;
+   height: 80%;
+   background: var(--full-color);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   overflow: hidden;
+   border-radius: 20px;
+   box-shadow: 5px 5px 10px black;
+   
+   position: absolute;
+   top: 10%;
+   left: 100%;
+   
+}
+
+
+
+.duty_section .duty_image{
+    width: 60%;
+    height: 100%;
+   
+}
+
+.duty_section .duty_image img{
+   width: 100%;
+   height: 100%;
+}
+
+
+.duty_section .duty_message{
+   width: 40%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.duty_message h2,h3,p{
+   text-align: center;
+}
+.duty_message p{
+   margin-top: -40px;
+   font-size: 1.2rem;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.duty_message h3{
+   margin-top: -30px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+   text-align: center;
+   margin-bottom: 10vh;
+}
+
+.calendar{
+   width: 65%;
+   height: 60vh;
+   margin: 0 auto 5vh auto;
+   
+}
+.calendar-header{
+   height: 45px;
+   margin-bottom: 10px;
+   display: flex;
+   align-items: center;
+   flex-direction: row-reverse;
+   justify-content: center;
+   gap: 5%;
+   
+
+}
+.calendar-header>span{
+   margin-left: 20px;
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: var(--primary-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 30%;
+   height: 100%;
+   border-radius: 20px;
+   background: var(--back-color);
+}
+.calendar-header>div{ 
+   width: 30%;
+   height: 100%;
+   display:flex;
+   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+   gap: 20px;
+}
+.calendar button{
+   font-size: inherit;
+   color: var(--primary-color);
+   width: 25%;
+   height: 100%;
+   background: var(--back-color);
+   border-radius: 10px;
+   cursor: pointer;
+}
+.calendar button#bigger_date{
+   width: 45%;
+}
+.calendar button:hover{
+   transform: scale(1.2);
+}
+
+#calendar{
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   border: 2px solid white;
+   background:#002147;
+   border-radius: 15px;
+}
+#calendar div {
+   border: 1px solid white;
+   height: 40px;
+   display: flex; 
+   align-items: center; 
+   justify-content: center; 
+   color: white;
+   font-weight: bold; 
+   transition: hover ease-in-out 0.5s;
+}
+
+#calendar div:hover {
+   background: rgba(255, 255, 255, 0.2);
+   cursor: pointer;
+   
+ }
+ 
+
+
+
+ #calendar div.calendar-days{
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: var(--secondary-color);
+   color: black;
+}
+
+
+
+.calendar-days:first-child{
+   border-top-left-radius: 10px;
+   
+}
+
+.calendar-days:nth-child(7n){
+   border-top-right-radius: 10px;
+   color: black;
+}
+
+.container{
+   margin-bottom: 5vh;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+.container form{
+   border-radius: 15px;
+      height: 90%;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background: white;
+      box-shadow: 2px 3px 3px black;
+   }
+   .container  .error{
+      color: red;
+      display: none;
+     }
+    
+   .container .signupbutton{
+      width: 285px;
+      height: 45px;
+      font-size: 18px;
+      border-radius: 10px;
+      background: var(--back-color);
+      border: 0;
+      box-shadow: 3px 3px 3px black;
+      cursor: not-allowed;
+      margin-top: 15px;
+      color: var(--secondary-color);
+      opacity: 0.5;
+     }
+
+   .signupbutton.enabled {
+      cursor: pointer; /* Change cursor to pointer */
+      opacity: 1;
+  }
+
+   .container form  fieldset legend{
+      margin-left: 20px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: 600;
+     }
+   .container form img{
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      cursor: pointer;
+      
+     }
+
+   .container form h2{
+      margin-top: 2%;
+      font-size: 30px;
+      color: var(--back-color);
+     
+    }
+   
+   .container form fieldset{
+      border: 1px solid rgb(204, 202, 202);
+      margin: 18px 0;
+      width: 75%;
+      height: 55px;
+      border-radius: 5px;
+   }
+
+   form fieldset:focus-within{
+      border: 2px solid black;
+   }
+
+   .container form fieldset.text_area{
+      height: 100px;
+      border: 1px solid black;
+   }
+    form fieldset.text_area #conf_details{
+      width: 100%;
+      height: 80px;
+      border-top: none;
+      border-bottom: none;
+      outline: none;
+      padding-left: 20px;
+      font-size: 1.1rem;
+    }
+
+   .container form fieldset input{
+      width: 85%;
+      height: 41px;
+      border: 0;
+      outline: none;
+      background: transparent;
+      font-size: 17px;
+      margin-top: -8px;
+      padding-left: 20px;
+    }
+
+   button:hover{
+       transform: scale(1.05);
+       
+}
+.school_copyright{
+   width: 100%;
+   height: 12vh;
+   background: rgb(54, 54, 54);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.school_copyright h3{
+   color: var(--full-color);
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 100;
+   margin-bottom: 15px;
+}
+
+/* Media Queries for max-width 480px */
+@media only screen and (max-width: 800px) {
+   /* Base adjustments */
+   
+   
+   /* Navigation */
+   .navbar .nav-logo{
+      width: 100%;
+  }
+  .nav-logo  span{
+      color: var(--primary-color);
+      font-size: 1.2rem;
+  }
+  .nav-logo span.menu{
+      display: block;
+      margin-left: 17%;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      padding: 7px;
+  }
+  .nav-logo span.menu i{
+      color: var(--null-color);
+      font-size: 32px;
+  }
+  .navbar .nav-move{
+      position: absolute;
+      top: 15vh;
+      right: 0;
+      width: 0;
+      overflow: hidden;
+      height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content:space-around;
+      background:rgba(3, 3, 63, 0.8);
+      transition: width ease-in-out 0.6s;
+  }
+  .nav-move span{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: center;
+      margin: unset;
+      height: 100%;
+      border-bottom: 5px solid var(--primary-color);
+  }
+   /* School news header */
+   .school_news {
+       padding-top: 10vh;
+       height: 40vh;
+   }
+   
+   .school_news h1 {
+       font-size: 1.8rem;
+   }
+   
+   .school_news p {
+       font-size: 1rem;
+   }
+   
+   /* Latest news section */
+   .news_latest {
+       height: auto;
+       flex-direction: column;
+       padding: 20px 0;
+       gap: 20px;
+   }
+   
+   .news_latest .latest_section {
+       width: 90%;
+       height: auto;
+       margin-left: 0 !important;
+   }
+   
+   .latest_section:hover {
+       transform: none;
+   }
+   
+   .news_latest button.next, 
+   .news_latest button.previous {
+      
+       display: none
+   }
+   
+   /* Duty section */
+   .school_duty {
+       height: 70vh;
+      
+   }
+   
+   .school_duty .duty_section {
+       width: 90%;
+       height: 90%;
+       flex-direction: column;
+       margin-left: -5%;
+   }
+   
+   .duty_section .duty_image {
+       width: 100%;
+       height: 50%;
+   }
+   
+   .duty_section .duty_message {
+       width: 100%;
+       height: 50%;
+       padding: 10px;
+   }
+   
+   .duty_message p {
+       margin-top: 0;
+       font-size: 1rem;
+   }
+   
+   /* Calendar */
+   .calendar {
+       width: 95%;
+       height: auto;
+   }
+   
+   .calendar-header {
+       flex-direction: column;
+       height: auto;
+       gap: 10px;
+       padding: 10px 0;
+   }
+   
+   .calendar-header > span,
+   .calendar-header > div {
+       width: 100%;
+   }
+
+   .calendar button{
+      height: 50px;
+   }
+   
+   #calendar {
+       grid-template-columns: repeat(7, 1fr);
+   }
+   
+   #calendar div {
+       height: 45px;
+       font-size: 0.8rem;
+   }
+   
+   #calendar div.calendar-days {
+       font-size: 0.9rem;
+   }
+   
+   /* Form container */
+   .container {
+       height: auto;
+       padding: 20px 0;
+   }
+   
+   .container form {
+       width: 90%;
+       height: auto;
+       padding: 20px 0;
+   }
+   
+   .container form fieldset {
+       width: 90%;
+   }
+   
+   .container .signupbutton {
+       width: 90%;
+   }
+   
+   /* Footer */
+   .school_copyright h3 {
+       font-size: 0.9rem;
+       text-align: center;
+       padding: 0 10px;
+   }
+   
+   h1, h2, h3 {
+       font-size: 1.5rem;
+       margin-left: 15px;
+   }
+}
+
+ 
+  

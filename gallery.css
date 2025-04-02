@@ -1,0 +1,202 @@
+:root {
+    --primary-color: whitesmoke;
+    --back-color: #002147;
+    --secondary-color: gold;
+    --text-color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background: var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 15vh;
+    background: var(--back-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-logo span {
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.menu {
+    display: none;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.nav-move {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-move a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.nav-move a:nth-of-type(5){
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.nav-move a:hover {
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Grid-based Image Gallery */
+.gallery-container {
+    margin: 80px auto;
+    padding: 20px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.lightbox span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer */
+.school-social {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--back-color);
+    position: relative;
+    bottom: 0;
+}
+
+.school-social h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.school-social i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.school-social i:hover {
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 800px){
+    .navbar .nav-logo{
+        width: 100%;
+    }
+    .nav-logo  span{
+        color: var(--primary-color);
+        font-size: 1.2rem;
+    }
+    .nav-logo span.menu{
+        display: block;
+        margin-left: 10%;
+        background: var(--secondary-color);
+        border-radius: 50%;
+        padding: 7px;
+    }
+    .nav-logo span.menu i{
+        color: black;
+        font-size: 32px;
+    }
+    .navbar .nav-move{
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        background:rgba(3, 3, 63, 0.8);
+        transition: width ease-in-out 0.6s;
+    }
+    .nav-move span{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        margin: unset;
+        height: 100%;
+        border-bottom: 5px solid whitesmoke;
+        
+    }
+}
