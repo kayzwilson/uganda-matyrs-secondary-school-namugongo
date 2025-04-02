@@ -284,6 +284,7 @@ input[type="submit"]:hover{
         margin: unset;
         height: 100%;
         border-bottom: 5px solid var(--primary-color);
+      width: 100%;
     }
     
     /* Backimage header */
