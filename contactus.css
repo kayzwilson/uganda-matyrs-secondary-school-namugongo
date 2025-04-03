@@ -83,6 +83,17 @@
   .nav-move span:hover{
       border-bottom: 5px solid var(--secondary-color);
   }
+.nav-move i{
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 8px;
+  }
+
+  .newmode{
+    background-color: black;
+    color: white;
+  }
 
   
 
