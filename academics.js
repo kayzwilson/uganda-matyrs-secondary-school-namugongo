@@ -21,5 +21,16 @@ menu.addEventListener("click", function(){
     
 })
 
+const darkmode = document.getElementById("darkmode");
+const headteacher = document.getElementById("headteacher");
+const changes = document.querySelectorAll(".changes");
+
+darkmode.addEventListener("click", function(){
+   document.body.classList.toggle("newmode");
+   headteacher.classList.toggle("newmode")
+   changes.forEach(e => e.classList.toggle("newmode"));
+   
+})
+
 
 
