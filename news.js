@@ -1,6 +1,6 @@
 const next = document.querySelector(".next");
 const sections = Array.from(document.querySelectorAll(".news_latest .latest_section"));
-const visibleCount = 3;  // how many sections are visible at a time
+const visibleCount = 3;  
 const previous = document.querySelector(".previous");
 let currentIndex = 0;
 
@@ -74,7 +74,7 @@ let currentDate = new Date();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     current.textContent = months[month]+" "+year;
-    //Clear the calender
+   
     calendarGrid.innerHTML = ''; 
     for(let i=0;i<7;i++){
         const newCell = document.createElement("div");
@@ -84,14 +84,14 @@ let currentDate = new Date();
         
     }
 
-    // Fill in the empty cells for leading spaces
+    
     for (let i = 0; i < firstDay; i++) {
         const newCell = document.createElement("div");
         calendarGrid.appendChild(newCell);
         
     }
 
-    // Generate the days of the month
+
     for (let day = 1; day <= daysInMonth; day++) {
         var newCell = document.createElement("div");
         newCell.innerHTML=day;
@@ -141,7 +141,7 @@ verify.forEach(input => {
     input.addEventListener("input", checkVerify);
 });
 
-// Add this at the bottom of your news.js file
+
 const navbar = document.querySelector(".nav-move");
 const menu = document.querySelector(".menu");
 menu.addEventListener("click", function(){
@@ -149,6 +149,24 @@ menu.addEventListener("click", function(){
     navbar.style.width = "50%";
     
 })
+
+function showpassword1() {
+  let password = document.querySelector(".password1");
+  let showpassword = document.querySelector(".viewpass1");
+
+ 
+
+  if (password.type === "password") {
+    password.type = "text";
+   
+  
+} else {
+    password.type = "password";
+    
+}
+
+}
+
 
 
 
