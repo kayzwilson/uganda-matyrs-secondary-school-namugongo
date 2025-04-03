@@ -26,3 +26,14 @@ menu.addEventListener("click", function(){
     navbar.style.width = "50%";
     
 })
+
+const darkmode = document.getElementById("darkmode");
+const headteacher = document.getElementById("headteacher");
+const changes = document.querySelectorAll(".changes");
+
+darkmode.addEventListener("click", function(){
+   document.body.classList.toggle("newmode");
+   headteacher.classList.toggle("newmode")
+   changes.forEach(e => e.classList.toggle("newmode"));
+   
+})
